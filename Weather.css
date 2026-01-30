@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.input-container
+{
+   background-color: slategray;
+   height: 10vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.weather-container
+{
+    background-color: darkslategray;
+    color: white;
+    height: 90vh;
+    width: 25vpw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-data
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+.labelloc
+{
+    font-size: 2rem;
+}
+
+.weather-status
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

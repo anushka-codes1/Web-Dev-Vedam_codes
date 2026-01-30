@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tweet = prompt("Enter tweet");
+        tweet = tweet.slice(0, 140); // str.slice is a part of a string from start index to end index-1. Does not modify the original string.
+        let tweetCount = tweet.length;
+        alert("You have written " + tweetCount + " characters, you have " + (140 - tweetCount) + " characters remaining.");
+
+        let name = prompt("Enter your name");
+        let firstChar = name.charAt(0); // str.charAt(index) returns the character at the specified index.
+        let upperCaseFirstLetter = firstChar.toUpperCase(); // str.toUpperCase() converts the string to uppercase.
+        alert("Your name in uppercase is: " + upperCaseFirstLetter + name.slice(1).toLowerCase()); //First letter of the name in uppercase, rest lowercase.
+
+        //Array Iteration
+        //forEach() Loop: when you want to call a function for every item in an array.
+        //Doesn't create a new array, it simply executes the function for each element.
+        const colors = ["Red", "Green", "Blue"];
+        colors.forEach(function(color){
+            console.log ("Bright " + color);
+        });
+
+        //map() Loop: when you want to create a new array by transforming each element in an array.
+        const salaries = [3000, 4000, 5000];
+        const increasedSalaries = salaries.map(function(salary){
+            return salary * 1.1; //10% increase
+        });
+        console.log(increasedSalaries);
+
+        //Filter() Loop: when you want to create a new array with only the elements that meet a certain condition.
+        const numbers = [10, 25, 30, 45, 50];
+        const filteredNumbers = numbers.filter(function(n){
+            return number > 30; //filter numbers greater than 30
+        });
+        console.log(filteredNumbers); //Output: [45, 50]
+
+        //Reduce : Combines all elements in an array into a single value by applying a function. E.g., sum, total, count.
+        var numberList= [10, 20, 30];
+        var sum = numberList.reduce(function(total, num){
+            return total + num;
+        }, 0); //0 is the initial value of total
+        console.log("Sum: " + sum); //Output: Sum: 60
+    </script>
+    
+</body>
+</html>

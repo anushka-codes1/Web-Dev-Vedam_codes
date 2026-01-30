@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6+</title>
+  </head>
+  <body>
+    <!-- Arrow functions are shorter/faster methods to write functions in JavaScript.
+         function addition(x, y) {
+             return x + y;
+         }
+            can be written as   const addition = (x, y) => x + y;
+            Another example:
+            const divide = (a,b) => {
+                if(b !==0) return a/b;
+                else return 'Division by zero not possible';
+            };
+        So, if one line -> return automatically
+        if multiple lines -> use curly braces and return statement
+    -->
+
+    <script>
+      const addition = (x, y) => x + y;
+      console.log(addition(5, 10));
+
+      // Template Strings: used to embed expressions within string literals, using backticks (`) instead of single or double quotes.
+      //  Example:
+      // const name = "John";
+      // const greeting = `Hello, ${name}!`;
+      // console.log(greeting);
+      // Output: Hello, John! (using backticks and ${} to embed variable)
+
+      const name = prompt("Enter your name:");
+      const greeting = `Hello, ${name}! Welcome to ES6+.`;
+      console.log(greeting);
+
+      //Destructuring: allows unpacking values from arrays or properties from objects into distinct variables.
+      // We can declare multiple variables in a single line.
+      // Example with array:
+      // const rgb = [255, 0, 0];
+      // const [red, green, blue] = rgb;
+      // console.log(red, green, blue);
+      // Output: 255 0 0
+
+      let colors = ["Cyan", "Magenta", "Yellow"];
+      console.log(`HI ${colors[0]}`);
+      console.log(`HI ${colors[1]}`);
+      console.log(`HI ${colors[2]}`);
+
+      let car = {
+        //Destructuring with object example
+        brand: "Honda",
+        model: "Civic",
+        year: 2020,
+      };
+      let { brand, model } = car; //allows us to extract brand and model properties from car object
+      console.log(brand, model); // Output: Honda Civic
+
+      // Spread Operator ...
+      let arr1 = [1, 2, 3];
+      let arr2 = [4, 5, 6];
+      let combinedArr = [...arr1, ...arr2]; //Combining two arrays
+      console.log("Combined Array:", combinedArr); //Output: [1, 2, 3, 4, 5, 6]
+
+      // p1 does NOT create a new object.
+      // It only copies the REFERENCE, so p1 and person point to the SAME heap location.
+      let p1 = person; // Reference copy → same heap address as 'person'
+      // p2 creates a NEW object in a DIFFERENT heap location.
+      // Spread operator makes a shallow copy (top-level properties copied by value).
+      let p2 = { ...person }; // Shallow copy → NEW heap address
+      person.name = "Ravi";
+      console.log(p1);
+      console.log(p2); // p2 remains unchanged because it points to a different heap object.
+      //Output:
+      //{ name: 'Ravi', city: 'Mumbai' } FOR P1
+      //{ name: 'Asha', city: 'Mumbai' } FOR P2
+
+      // Rest Operator ...
+      function sum(...numbers) {
+        return numbers.reduce((total, num) => total + num, 0); //numbers.reduce refer to previous example in Strings.html
+      }
+      console.log("Sum:", sum(1, 2, 3, 4, 5)); //Output: 15
+      console.log("Sum:", sum(10, 20)); //Output: 30
+      console.log("Sum:", sum()); //Output: 0
+    </script>
+  </body>
+</html>

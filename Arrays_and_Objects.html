@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Objects</title>
+  </head>
+  <body>
+    <script>
+      // Arrays: collection of similar data types
+      const fruits = ["Apple", "Banana", "Cherry"];
+      console.log("Fruits Array:", fruits); //Output: ["Apple", "Banana", "Cherry"]
+      console.log("First Fruit:", fruits[0]); //Output: Apple
+      console.log("Second Fruit:", fruits[1]); //Output: Banana
+
+      // Modifying Arrays
+      fruits.push("Date"); //push adds element at the end of the array
+      console.log("Fruits after push:", fruits); //Output: ["Apple", "Banana", "Cherry", "Date"]
+      fruits.pop();//pop removes element from the end of the array
+      console.log("Fruits after pop:", fruits); //Output: ["Apple", "Banana", "Cherry"]
+      fruits.unshift("Mango"); //unshift adds element at the beginning of the array
+      console.log("Fruits after unshift:", fruits); //Output: ["Mango", "Apple", "Banana", "Cherry"]
+      fruits.shift();//shift removes element from the beginning of the array
+      console.log("Fruits after shift:", fruits); //Output: ["Apple", "Banana", "Cherry"]
+
+      //Splicing Arrays
+      let fruits1 = ["Apple", "Banana", "Cherry", "Date"];
+      console.log(fruits1.splice(1, 2)); // Removes 2 elements from fruits1 array starting from index 1: ["Banana", "Cherry"]
+      console.log(fruits1); // Remaining elements: ["Apple", "Date"]
+
+      //Remove and add elements to the array: splice (startIdx, no.ofElements you want to remove, elements to add)
+      console.log(fruits1.splice(1, 1, "Blueberry", "Coconut")); // Removes 1 element from index 1: ["Banana"]
+      console.log(fruits1); // Remaining elements: ["Apple", "Blueberry", "Coconut", "Date"]
+
+      //So splicing can be jused to add elements in the midst of the array
+      
+       // Loops
+      for (let i=0; i<fruits.length; i++){
+        console.log("Index: " + i + " --> " + fruits[i]); //Output: Index: 0 --> Apple, Index: 1 --> Banana, Index: 2 --> Cherry
+      }
+
+      // Search ---> Linear Search
+        const targetFruit = "Banana";   
+        for (let i = 0; i < fruits.length; i++) {
+          if (fruits[i] === targetFruit) {
+            console.log(targetFruit + " found at index " + i); //Output: Banana found at index 1
+            break;
+          }
+        }
+
+
+      // Objects: combination of multiple data types with key-value pairs
+      const person = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+      console.log("Person Object:", person); //Output: {name: "John", age: 30, city: "New York"}
+      console.log("Person Name:", person.name); //Output: John
+      console.log("Person Age:", person.age); //Output: 30
+
+      // Modifying Objects
+      person.age = 31;
+      console.log("Person after age update:", person); //Output: {name: "John", age: 31, city: "New York"}
+      person.country = "USA";
+      console.log("Person after adding country:", person); //Output: {name: "John", age: 31, city: "New York", country: "USA"}
+
+     
+    </script>
+  </body>
+</html>
+
+</html>
