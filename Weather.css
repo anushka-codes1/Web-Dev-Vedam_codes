@@ -7,7 +7,7 @@
 
 .input-container
 {
-   background-color: slategray;
+   background: linear-gradient(to bottom, #484a4e, #aaacae);
    height: 10vh;
    width: 100%;
    display: flex;
@@ -17,7 +17,7 @@
 
 .weather-container
 {
-    background-color: darkslategray;
+    background: linear-gradient(to bottom, #1e3c72, #2a69ac);
     color: white;
     height: 90vh;
     width: 25vpw;
