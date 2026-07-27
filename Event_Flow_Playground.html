@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grandparent {
+            border: 1px solid rgb(238, 158, 158);
+            border-radius: 5px;
+            background-color: rgb(238, 158, 158);
+            padding: 10px;
+            text-align: center;
+            height: 150px;
+            width: 50%;
+        }
+        #parent {
+            border: 1px solid rgb(151, 161, 248);
+            margin: auto;
+            border-radius: 5px;
+            background-color: rgb(151, 161, 248);
+            padding: 10px;
+            text-align: center;
+            height: 100px;
+            width: 90%;
+        }
+        #btn{
+            background-color: rgb(13, 153, 0);
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+        }
+        #log {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            min-height: 200px;
+            width: 40%;
+            float: right;
+            position: relative;
+            top: -200px;
+        }
+        #clearLogBtn{
+            background-color: rgb(255, 0, 0);
+            border: none;
+            border-radius: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Flow Playground</h1>
+    <h2>Demonstrating Capturing, Bubbling and Propagation Control</h2>
+    <div id="grandparent"> Grandparent
+        <div id="parent"> Parent
+            <button id="btn" > Click Me </button>
+        </div>
+    </div>
+    <div id="log">
+        <b>Event Log:</b>
+        <button id="clearLogBtn"> Clear Log </button>
+        <div id="logEntries"> 
+            Capturing -> Target -> Bubbling
+            stopPropagation blocks parent
+            stopImmediatePropagation blocks sibling handlers
+        </div>
+    </div>
+    <script src="Event_Flow_Playground.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Parse and Stringify</title>
+</head>
+<body>
+    <script>
+        // JSON.parse() is used to convert a JSON string into a JavaScript object.
+        const jsonString = '{"name": "John", "age": 30, "city": "New York"}';
+        const jsonObject = JSON.parse(jsonString);
+        console.log(jsonObject);
+        // Output: { name: 'John', age: 30, city: 'New York' } (Note: Keys such as name, age are not enclosed in quotes in JavaScript objects)
+
+        // JSON.stringify() is used to convert a JavaScript object into a JSON string.
+        const person = { name: "Alice", age: 25, city: "Los Angeles" };
+        const personString = JSON.stringify(person);
+        console.log(personString);
+        // Output: {"name":"Alice","age":25,"city":"Los Angeles"} (Note: Keys such as name, age and string values such as "Alice", "Los Angeles" are enclosed in double quotes in JSON strings.)
+    </script>
+</body>
+</html>

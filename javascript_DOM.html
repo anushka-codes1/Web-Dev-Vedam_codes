@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Dom Manipulation Demo</h2>
+    <p id="intro">Welcome to JS DOM!</p>
+    <script>
+        //Find element by ID
+        let introElement = document.getElementById("intro");
+
+        //Change text content
+        introElement.innerText = "Hello students!";
+
+        //Change background color
+        document.body.style.backgroundColor = "lightblue";
+
+        //create new element
+        let newPara = document.createElement("p");
+        newPara.innerText = "I was created using JS.";
+        document.body.appendChild(newPara);
+
+        let newPara2 = document.createElement("p");
+        newPara2.innerText = "I am another paragraph created using JS.";
+        document.body.appendChild(newPara2);
+    </script>
+</body>
+</html>
