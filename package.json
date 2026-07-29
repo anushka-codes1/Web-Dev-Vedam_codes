@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "state-and-props",
+=======
+  "name": "use-effect-demo",
+>>>>>>> 24333f5bd92971e20fa562d2ce495f4533af21a8
   "private": true,
   "version": "0.0.0",
   "type": "module",
