@@ -242,3 +242,28 @@ hr {
     width: 100%;
   }
 }
+
+/* ===========================
+React Router Links
+=========================== */
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  background: #1677ff;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background: #095dcc;
+}
