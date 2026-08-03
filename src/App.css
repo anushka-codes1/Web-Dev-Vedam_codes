@@ -1,3 +1,7 @@
+/* ===========================
+Global
+=========================== */
+
 * {
   box-sizing: border-box;
 }
@@ -13,22 +17,21 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 30px;
+  text-align: center;
 }
 
 .app h1 {
-  text-align: center;
   color: #164a91;
   margin-bottom: 10px;
 }
 
 .intro {
-  text-align: center;
   color: #666;
   margin-bottom: 30px;
 }
 
 /* ===========================
-   Navigation Buttons
+Navigation Buttons
 =========================== */
 
 .nav-buttons {
@@ -40,24 +43,24 @@ body {
 }
 
 /* ===========================
-   Assignment Card
+Assignment Card
 =========================== */
 
 .question {
   background: white;
   padding: 25px;
-  margin-bottom: 25px;
+  margin: 25px auto;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .question h2 {
-  margin-top: 0;
   color: #164a91;
 }
 
 /* ===========================
-   Buttons
+Buttons
 =========================== */
 
 button {
@@ -81,8 +84,6 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Delete Button */
-
 .delete-btn {
   background: #dc3545;
 }
@@ -92,11 +93,12 @@ button:disabled {
 }
 
 /* ===========================
-   Student Cards
+Student Cards
 =========================== */
 
 .cards-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -110,46 +112,34 @@ button:disabled {
 }
 
 .student-card h3 {
-  margin-top: 0;
   color: #164a91;
 }
 
 /* ===========================
-   Todo Input
+Inputs
 =========================== */
 
 .todo-input {
   display: flex;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
-.todo-input input {
-  flex: 1;
-  min-width: 250px;
+.todo-input input,
+.search-box,
+input[type="text"] {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 15px;
+  width: 300px;
+  max-width: 100%;
 }
 
 /* ===========================
-   Search Input
-=========================== */
-
-.search-box {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  margin: 15px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 15px;
-}
-
-/* ===========================
-   Badge
+Badge
 =========================== */
 
 .badge {
@@ -163,84 +153,32 @@ button:disabled {
 }
 
 /* ===========================
-   Todo List
-=========================== */
-
-.todo-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f8faff;
-  border: 1px solid #ddd;
-  padding: 12px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  gap: 15px;
-}
-
-.todo-title {
-  flex: 1;
-}
-
-/* ===========================
-   User Filter Buttons
-=========================== */
-
-.user-buttons {
-  margin-bottom: 20px;
-}
-
-/* ===========================
-   Lists
+Lists
 =========================== */
 
 ul {
-  padding-left: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
 }
 
 li {
-  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 12px 0;
 }
 
 /* ===========================
-   Horizontal Line
+Horizontal Line
 =========================== */
 
 hr {
-  margin: 35px 0;
+  margin: 35px auto;
   border: none;
   border-top: 2px solid #ddd;
-}
-
-/* ===========================
-   Responsive
-=========================== */
-
-@media (max-width: 768px) {
-  .app {
-    padding: 15px;
-  }
-
-  .cards-container {
-    flex-direction: column;
-  }
-
-  .todo-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  .todo-input {
-    flex-direction: column;
-  }
-
-  .todo-input input {
-    width: 100%;
-  }
+  width: 90%;
 }
 
 /* ===========================
@@ -266,4 +204,36 @@ nav a {
 
 nav a:hover {
   background: #095dcc;
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todo-input {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 220px;
+  }
+
+  li {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
 }
