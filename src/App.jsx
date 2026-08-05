@@ -5,6 +5,7 @@ import StatesAndProps from "./components/States-and-Props";
 import APIPractice from "./components/APIPractice";
 import ReactRouterDOM from "./components/React-Router-DOM";
 import DynamicRoutingContext from "./components/Dynamic-Routing_Context";
+import UseReducer from "./components/UseReducer";
 
 function App() {
   const [page, setPage] = useState("states");
@@ -29,6 +30,10 @@ function App() {
         <button onClick={() => setPage("dynamic")}>
           Dynamic Routing & Context
         </button>
+
+        <button onClick={() => setPage("reducer")}>
+          useReducer
+        </button>
       </div>
 
       <hr />
@@ -37,6 +42,7 @@ function App() {
       {page === "api" && <APIPractice />}
       {page === "router" && <ReactRouterDOM />}
       {page === "dynamic" && <DynamicRoutingContext />}
+      {page === "reducer" && <UseReducer />}
     </div>
   );
 }
